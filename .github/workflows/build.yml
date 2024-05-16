@@ -27,6 +27,11 @@ jobs:
           sudo apt-get install libstdc++6
           sudo apt-get install aidl 
         shell: bash
+        
+      - name: Install Android SDK Build Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install android-sdk-build-tools
 
       - name: Cache Buildozer global directory
         uses: actions/cache@v2
