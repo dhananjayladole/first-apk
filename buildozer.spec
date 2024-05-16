@@ -1,14 +1,13 @@
 [app]
 
 # (str) Title of your application
-title = TicTacToeApp
+title = tictactoeapp
 
 # (str) Package name
-package.name = TicTacToeapk
+package.name = tictactoeapk
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.TicTacToeapp
-
+package.domain =  org.tictactoeapp
 # (str) Source code where the main.py live
 source.dir = .
 
@@ -37,17 +36,17 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.1.0,kivymd==0.104.2,pillow==8.3.1
+requirements = python3,kivy==2.3.0,kivymd==1.2.0,pillow==10.3.0
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/nfsIcon/presplash.png
+presplash.filename = %(source.dir)s/image/presplash.png
 
 # (str) Icon of the application
-#icon.filename = %(source.dir)s/nfsIcon/presplash.png
+icon.filename = %(source.dir)s/image/presplash.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
@@ -107,7 +106,7 @@ android.presplash_color = black
 #android.minapi = 21
 
 # (int) Android SDK version to use
-#android.sdk = 20
+#android.sdk = 30
 
 # (str) Android NDK version to use
 #android.ndk = 23b
