@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Remove.extraheader configuration entry
+      - name: Remove extraheader configuration entry
         run: git config --unset http.https://github.com/.extraheader || true
 
       - name: Get Date
@@ -43,8 +43,8 @@ jobs:
         uses: actions/cache@v2
         with:
           path: |
-           .buildozer_global
-           .buildozer
+          .buildozer_global
+          .buildozer
           key: ${{ runner.os }}--${{ hashFiles('.buildozer-global/*.txt') }}
 
       - name: Install Android SDK
@@ -60,7 +60,7 @@ jobs:
         run: aidl Dummy.aidl || true
 
       - name: Set aidl path for Buildozer
-        run: echo "BUILD_AIDL_PATH=/path/to/your/aidl" >> $GITHUB_ENV
+        run: echo "BUILD_AIDL_PATH=$(pwd)/Dummy.aidl" >> $GITHUB_ENV
 
       - name: Verify aidl installation
         run: aidl --version || true
